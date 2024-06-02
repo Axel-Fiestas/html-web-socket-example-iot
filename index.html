@@ -54,7 +54,7 @@
     let stompClient = null;
 
     function connect() {
-      const socket = new SockJS("https://sensordatacloudbackend.azurewebsites.net/ws");
+      const socket = new SockJS('https://sensordatacloudbackend.azurewebsites.net/ws');
       stompClient = Stomp.over(socket);
       stompClient.connect(
               {},
