@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+  />
   <title>Sensor Data Dashboard</title>
   <style>
     body {
@@ -61,9 +54,7 @@
     let stompClient = null;
 
     function connect() {
-      const socket = new SockJS(
-              "https://sensordatacloudbackend.azurewebsites.net/ws"
-      );
+      const socket = new SockJS("https://sensordatacloudbackend.azurewebsites.net/ws");
       stompClient = Stomp.over(socket);
       stompClient.connect(
               {},
@@ -91,14 +82,15 @@
       connect();
     };
   </script>
-  <body>
-  <header>
-    <div class="container">
-      <h1>Sensor Data Dashboard</h1>
-    </div>
-  </header>
+</head>
+<body>
+<header>
   <div class="container">
-    <div id="sensorData"></div>
+    <h1>Sensor Data Dashboard</h1>
   </div>
-  </body>
+</header>
+<div class="container">
+  <div id="sensorData"></div>
+</div>
+</body>
 </html>
